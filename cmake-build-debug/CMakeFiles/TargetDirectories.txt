@@ -1,0 +1,4 @@
+/Users/aliran/CLionProjects/DataStructure/cmake-build-debug/CMakeFiles/Static_Array_Implementation.dir
+/Users/aliran/CLionProjects/DataStructure/cmake-build-debug/CMakeFiles/Dynamic_Array_Implementation.dir
+/Users/aliran/CLionProjects/DataStructure/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/aliran/CLionProjects/DataStructure/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,4 @@
+/Users/aliran/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Users/aliran/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/aliran/CLionProjects/DataStructure -B /Users/aliran/CLionProjects/DataStructure/cmake-build-debug-visual-studio
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/aliran/CLionProjects/DataStructure/cmake-build-debug-visual-studio

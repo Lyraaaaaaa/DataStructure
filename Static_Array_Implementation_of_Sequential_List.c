@@ -6,6 +6,7 @@
 
 #define MaxiSize 10                             //预处理指令➡️定义了一个名为MaxiSize的宏,值为10
                                                 //在后续代码中MaxiSize会直接被替换为10
+
 typedef struct {                                //声明SqList数据类型
     int data [MaxiSize];                        //声明名为data的数组,大小为MaxSize
     int length;                                 //顺序表的长度
@@ -40,10 +41,26 @@ bool ListDelete (SqList *L,int i ,int *e){       //删除L顺序表中第i个数
         return true;
 }
 
+int GetElem(SqList L,int i){                    //按位查找
+    if(i<1 || i>L.length)
+        return false;
+    if(L.length>=MaxiSize)
+        return false;
+    return L.data[i-1];                         //位序是从1开始,数组下标是从0开始
+}
+
+int LocateElem(SqList L,int e){                 //按值查找
+    for (int i = 0; i<L.length ; i++ )
+        if(L.data[i] == e)
+            return i+1;                         //i是数组下标,返回的是位序
+    return 0;
+}
+
 int main() {                                     //程序入口
     SqList L;                                    //声明一个顺序表
                                                  // ➡️在内存中分配存储顺序表L的空间
                                                  //MaxSize*sizeof(int)+存储length的空间
+
     InitList(&L);                                //调用初始化函数,将L的地址作为参数传递
     for (int a = 0; a < MaxiSize; a++) {
         L.data[a] = a;
@@ -56,10 +73,13 @@ int main() {                                     //程序入口
         printf("After insertion - Length:%d, Element:%d\n", L.length, L.data[a]);
     }
     int e = -1;                                 //用变量e把删除的元素“带回”
+
     bool deleteSuccess = ListDelete (&L, 3, &e);
     if (deleteSuccess){
         printf("Deleted the third element which is:%d\n", e);
     } else
         printf("illegal i,Deletion failed");
+
+    LocateElem(L,9);                        //调用按值查找
     return 0;
 }

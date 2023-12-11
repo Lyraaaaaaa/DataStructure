@@ -32,12 +32,18 @@ void IncreaseSize (SeqList *L, int len){                //声明增加顺序表�
     free(p);                                            //释放原来的内存
 }
 
+int GetElem (SeqList L,int i){                          //按位查找
+    return L.data[i-1];
+}
+
 int main(){
     SeqList L;
     InitList1 (&L);
     printf("MaxSize:%d\n",L.MaxSize);
     IncreaseSize(&L,5);                             //调用函数将内存大小增加5
     printf("MaxSize:%d\n",L.MaxSize);
+
+    GetElem(L,3);                                    //调用按位查找
     return 0;
 
 
